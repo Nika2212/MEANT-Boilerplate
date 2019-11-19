@@ -3,7 +3,9 @@ import { IBaseController } from "../core/IBase.controller";
 import { Request, Response } from 'express';
 
 export class HomeController extends BaseController implements IBaseController {
-    public index(req: Request, res: Response): Response | Promise<Response> | void {}
+    public index(req: Request, res: Response): Response | Promise<Response> | void {
+        res.render('control-panel');
+    }
     public create(req: Request, res: Response): Response | Promise<Response> | void {}
     public update(req: Request, res: Response): Response | Promise<Response> | void {}
     public show(req: Request, res: Response): Response | Promise<Response> | void {}
