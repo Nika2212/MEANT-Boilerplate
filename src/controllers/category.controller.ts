@@ -54,7 +54,6 @@ export class CategoryController extends BaseController implements IBaseControlle
         });
     }
     public async createSeries(req: Request, res: Response): Promise<Response | void> {
-
     }
     public async appendManufacturerToCategory(req: Request, res: Response): Promise<Response | void> {
         const categoryId = req.body.categoryId;
