@@ -1,19 +1,35 @@
-import mongoose from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
 const UserSchema = new mongoose.Schema({
     name: {
         type: String,
+        min: 4,
+        max: 255,
         required: true
     },
     email: {
         type: String,
+        min: 5,
+        max: 255,
         required: true,
         index: { unique : true }
     },
     password: {
-        type: String
+        type: String,
+        min: 6,
+        max: 255,
+        required: true,
     },
-    date: {
+    role_id: {
+        type: Schema.Types.ObjectId
+    },
+    cart_id: {
+        type: Schema.Types.ObjectId
+    },
+    wishlist_id: {
+        type: Schema.Types.ObjectId
+    },
+    timestamp: {
         type: Date,
         default: Date.now
     }

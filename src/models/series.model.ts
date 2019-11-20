@@ -1,6 +1,6 @@
 import mongoose, {Schema} from 'mongoose';
 
-const ManufacturerSchema = new mongoose.Schema({
+const SeriesSchema = new mongoose.Schema({
     name: {
         type: String,
         max: 255,
@@ -29,7 +29,14 @@ const ManufacturerSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    children: [{ type: Schema.Types.ObjectId }],
+    manufacturer: {
+        type: Schema.Types.ObjectId,
+        ref: 'Manufacturer',
+    },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    },
     timestamp: {
         type: Date,
         default: Date.now
@@ -37,4 +44,4 @@ const ManufacturerSchema = new mongoose.Schema({
 });
 
 
-export const Manufacturer = mongoose.model('Manufacturer', ManufacturerSchema);
+export const Series = mongoose.model('Series', SeriesSchema);

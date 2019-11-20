@@ -1,7 +1,7 @@
 {
-  "name": "meant-boilerplate",
+  "name": "maroni-ecommerce",
   "version": "1.0.0",
-  "description": "MongoDB-ExpressJS-Angular-NodeJS-TypeScript Standard Boilerplate (IN DEVELOPMENT)",
+  "description": "Maroni ecommerce project, education only",
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
